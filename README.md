@@ -2,6 +2,8 @@
 
 Projekt na ESP32: zdalne odtwarzanie melodii na buzzerze ze strony WWW oraz podgląd temperatury z czujnika DS18B20. Komunikacja idzie przez **Firebase Realtime Database**.
 
+Panel web: [https://wojciechgalant1.github.io/esp_buzzer/](https://wojciechgalant1.github.io/esp_buzzer/)
+
 ## Funkcje
 
 - wybór i odtwarzanie melodii z przeglądarki (Prosta melodia, Sto lat, Gwiazdeczka, Mario, Jingle Bells)
