@@ -23,34 +23,29 @@ OneWire oneWire(tempPin);
 DallasTemperature tempSensor(&oneWire);
 
 const int song0Notes[] = {
-  NOTE_C4, NOTE_G3, NOTE_G3, NOTE_A3,
-  NOTE_G3, REST, NOTE_B3, NOTE_C4
-};
-const int song0Durations[] = {
-  4, 8, 8, 4, 4, 4, 4, 4
-};
-
-const int song1Notes[] = {
-  NOTE_C4, NOTE_C4, NOTE_D4, NOTE_C4, NOTE_F4, NOTE_E4,
-  NOTE_C4, NOTE_C4, NOTE_D4, NOTE_C4, NOTE_G4, NOTE_F4,
-  NOTE_C4, NOTE_C4, NOTE_C5, NOTE_A4, NOTE_F4, NOTE_E4, NOTE_D4,
-  NOTE_AS4, NOTE_AS4, NOTE_A4, NOTE_F4, NOTE_G4, NOTE_F4
-};
-const int song1Durations[] = {
-  8, 8, 4, 4, 4, 2,
-  8, 8, 4, 4, 4, 2,
-  8, 8, 4, 4, 4, 4, 2,
-  8, 8, 4, 4, 4, 2
-};
-
-const int song2Notes[] = {
   NOTE_C4, NOTE_C4, NOTE_G4, NOTE_G4, NOTE_A4, NOTE_A4, NOTE_G4,
   NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_D4, NOTE_D4, NOTE_C4,
+  NOTE_G4, NOTE_G4, NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_D4,
+  NOTE_G4, NOTE_G4, NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_D4,
+  NOTE_C4, NOTE_C4, NOTE_G4, NOTE_G4, NOTE_A4, NOTE_A4, NOTE_G4,
+  NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_D4, NOTE_D4, NOTE_C4,
+  REST,
+  NOTE_C4, NOTE_C4, NOTE_G4, NOTE_G4, NOTE_A4, NOTE_A4, NOTE_G4,
+  NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_D4, NOTE_D4, NOTE_C4,
+  NOTE_G4, NOTE_G4, NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_D4,
   NOTE_G4, NOTE_G4, NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_D4,
   NOTE_C4, NOTE_C4, NOTE_G4, NOTE_G4, NOTE_A4, NOTE_A4, NOTE_G4,
   NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_D4, NOTE_D4, NOTE_C4
 };
-const int song2Durations[] = {
+const int song0Durations[] = {
+  4, 4, 4, 4, 4, 4, 2,
+  4, 4, 4, 4, 4, 4, 2,
+  4, 4, 4, 4, 4, 4, 2,
+  4, 4, 4, 4, 4, 4, 2,
+  4, 4, 4, 4, 4, 4, 2,
+  4, 4, 4, 4, 4, 4, 2,
+  2,
+  4, 4, 4, 4, 4, 4, 2,
   4, 4, 4, 4, 4, 4, 2,
   4, 4, 4, 4, 4, 4, 2,
   4, 4, 4, 4, 4, 4, 2,
@@ -58,28 +53,88 @@ const int song2Durations[] = {
   4, 4, 4, 4, 4, 4, 2
 };
 
-const int song3Notes[] = {
+const int song1Notes[] = {
   NOTE_E5, NOTE_E5, REST, NOTE_E5, REST, NOTE_C5, NOTE_E5, REST,
-  NOTE_G5, REST, REST, NOTE_G4
+  NOTE_G5, REST, NOTE_G4, REST,
+  NOTE_C5, REST, NOTE_G4, REST, NOTE_E4, REST,
+  NOTE_A4, NOTE_B4, NOTE_AS4, NOTE_A4,
+  NOTE_G4, NOTE_E5, NOTE_G5, NOTE_A5, NOTE_F5, NOTE_G5,
+  REST, NOTE_E5, NOTE_C5, NOTE_D5, NOTE_B4, REST,
+  NOTE_C5, REST, NOTE_G4, REST, NOTE_E4, REST,
+  NOTE_A4, NOTE_B4, NOTE_AS4, NOTE_A4,
+  NOTE_G4, NOTE_E5, NOTE_G5, NOTE_A5, NOTE_F5, NOTE_G5,
+  REST, NOTE_E5, NOTE_C5, NOTE_D5, NOTE_B4, REST,
+  NOTE_G5, NOTE_FS5, NOTE_F5, NOTE_DS5, NOTE_E5,
+  REST, NOTE_GS4, NOTE_A4, NOTE_C5, REST, NOTE_A4, NOTE_C5, NOTE_D5,
+  REST, NOTE_DS5, REST, NOTE_D5,
+  NOTE_C5, REST,
+  NOTE_G5, NOTE_FS5, NOTE_F5, NOTE_DS5, NOTE_E5,
+  REST, NOTE_GS4, NOTE_A4, NOTE_C5, REST, NOTE_A4, NOTE_C5, NOTE_D5,
+  REST, NOTE_DS5, REST, NOTE_D5,
+  NOTE_C5, REST
 };
-const int song3Durations[] = {
+const int song1Durations[] = {
   8, 8, 8, 8, 8, 8, 8, 8,
-  4, 8, 4, 4
+  4, 4, 8, 4,
+  4, 8, 8, 4, 4, 8,
+  4, 4, 8, 4,
+  8, 8, 8, 4, 8, 8,
+  8, 4, 8, 8, 4, 8,
+  4, 8, 8, 4, 4, 8,
+  4, 4, 8, 4,
+  8, 8, 8, 4, 8, 8,
+  8, 4, 8, 8, 4, 8,
+  8, 8, 8, 4, 8,
+  8, 8, 8, 8, 8, 8, 8, 4,
+  4, 4, 8, 4,
+  2, 2,
+  8, 8, 8, 4, 8,
+  8, 8, 8, 8, 8, 8, 8, 4,
+  4, 4, 8, 4,
+  2, 2
 };
 
-const int song4Notes[] = {
-  NOTE_E4, NOTE_E4, NOTE_E4,
-  NOTE_E4, NOTE_E4, NOTE_E4,
-  NOTE_E4, NOTE_G4, NOTE_C4, NOTE_D4, NOTE_E4,
-  NOTE_F4, NOTE_F4, NOTE_F4, NOTE_F4, NOTE_F4, NOTE_E4, NOTE_E4, NOTE_E4, NOTE_E4,
-  NOTE_D4, NOTE_D4, NOTE_E4, NOTE_D4, NOTE_G4
+const int song2Notes[] = {
+  NOTE_D4, NOTE_B4, NOTE_A4, NOTE_G4, NOTE_D4,
+  NOTE_D4, NOTE_B4, NOTE_A4, NOTE_G4, NOTE_E4,
+  NOTE_E4, NOTE_C5, NOTE_B4, NOTE_A4, NOTE_FS4,
+  NOTE_D5, NOTE_D5, NOTE_C5, NOTE_A4, NOTE_B4, NOTE_G4,
+  NOTE_D4, NOTE_B4, NOTE_A4, NOTE_G4, NOTE_D4,
+  NOTE_D4, NOTE_B4, NOTE_A4, NOTE_G4, NOTE_E4,
+  NOTE_E4, NOTE_C5, NOTE_B4, NOTE_A4,
+  NOTE_D5, NOTE_D5, NOTE_D5, NOTE_D5, NOTE_E5, NOTE_D5, NOTE_C5, NOTE_A4, NOTE_G4,
+  REST,
+  NOTE_B4, NOTE_B4, NOTE_B4,
+  NOTE_B4, NOTE_B4, NOTE_B4,
+  NOTE_B4, NOTE_D5, NOTE_G4, NOTE_A4, NOTE_B4,
+  NOTE_C5, NOTE_C5, NOTE_C5, NOTE_C5, NOTE_C5, NOTE_B4, NOTE_B4, NOTE_B4, NOTE_B4,
+  NOTE_A4, NOTE_A4, NOTE_B4, NOTE_A4, NOTE_D5,
+  NOTE_B4, NOTE_B4, NOTE_B4,
+  NOTE_B4, NOTE_B4, NOTE_B4,
+  NOTE_B4, NOTE_D5, NOTE_G4, NOTE_A4, NOTE_B4,
+  NOTE_C5, NOTE_C5, NOTE_C5, NOTE_C5, NOTE_C5, NOTE_B4, NOTE_B4, NOTE_B4, NOTE_B4,
+  NOTE_D5, NOTE_D5, NOTE_C5, NOTE_A4, NOTE_G4
 };
-const int song4Durations[] = {
+const int song2Durations[] = {
+  4, 4, 4, 4, 2,
+  4, 4, 4, 4, 2,
+  4, 4, 4, 4, 2,
+  4, 4, 4, 4, 2, 2,
+  4, 4, 4, 4, 2,
+  4, 4, 4, 4, 2,
+  4, 4, 4, 4,
+  8, 8, 8, 8, 4, 4, 4, 4, 2,
+  2,
   8, 8, 4,
   8, 8, 4,
   8, 8, 8, 8, 2,
   8, 8, 8, 8, 8, 8, 8, 16, 16,
-  8, 8, 8, 4, 4
+  8, 8, 8, 4, 4,
+  8, 8, 4,
+  8, 8, 4,
+  8, 8, 8, 8, 2,
+  8, 8, 8, 8, 8, 8, 8, 16, 16,
+  8, 8, 8, 4, 2
 };
 
 struct Song {
@@ -90,11 +145,9 @@ struct Song {
 };
 
 const Song songs[] = {
-  { "Prosta melodia", song0Notes, song0Durations, sizeof(song0Notes) / sizeof(song0Notes[0]) },
-  { "Sto lat", song1Notes, song1Durations, sizeof(song1Notes) / sizeof(song1Notes[0]) },
-  { "Gwiazdeczka", song2Notes, song2Durations, sizeof(song2Notes) / sizeof(song2Notes[0]) },
-  { "Mario", song3Notes, song3Durations, sizeof(song3Notes) / sizeof(song3Notes[0]) },
-  { "Jingle Bells", song4Notes, song4Durations, sizeof(song4Notes) / sizeof(song4Notes[0]) }
+  { "Gwiazdeczka", song0Notes, song0Durations, sizeof(song0Notes) / sizeof(song0Notes[0]) },
+  { "Mario", song1Notes, song1Durations, sizeof(song1Notes) / sizeof(song1Notes[0]) },
+  { "Jingle Bells", song2Notes, song2Durations, sizeof(song2Notes) / sizeof(song2Notes[0]) }
 };
 
 const int songCount = sizeof(songs) / sizeof(songs[0]);

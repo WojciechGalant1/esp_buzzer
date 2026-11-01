@@ -6,7 +6,7 @@ Panel web: [https://wojciechgalant1.github.io/esp_buzzer/](https://wojciechgalan
 
 ## Funkcje
 
-- wybór i odtwarzanie melodii z przeglądarki (Prosta melodia, Sto lat, Gwiazdeczka, Mario, Jingle Bells)
+- wybór i odtwarzanie melodii z przeglądarki (Gwiazdeczka, Mario, Jingle Bells)
 - odczyt temperatury DS18B20 (zasilanie normalne, nie parasite) co ok. 2 s
 - podgląd temperatury i stanu odtwarzania na stronie `index.html`
 
@@ -90,7 +90,7 @@ Odczyt i zapis wymagają zalogowanego użytkownika, na przykład:
 | Ścieżka | Typ | Znaczenie |
 | --- | --- | --- |
 | `board1/buzzer/play` | bool | `true` = zagraj wybraną melodię; ESP po skończeniu ustawia `false` |
-| `board1/buzzer/song` | int | indeks utworu (0–4) |
+| `board1/buzzer/song` | int | indeks utworu (0–2) |
 | `board1/sensors/temperature` | float | temperatura w °C |
 
 ## Uruchomienie
